@@ -1,0 +1,7 @@
+{
+  "name": "lam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

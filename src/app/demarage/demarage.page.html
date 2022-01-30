@@ -1,0 +1,35 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>demarage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Page d'accueille
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-slides #sliders style="width: 100% !important;height: 100% !important;" class="slide-padding" pager="false">
+    <ion-slide *ngFor="let story of topStories; let i = index">
+      <div class="container">
+        <ion-img src="{{story.picture}}"></ion-img>
+        <br>
+        <ion-label>{{story.title}}</ion-label>
+        <!-- (click)="nextSlide(i)" -->
+        <ion-button *ngIf="story.title==='1' || story.title==='2'" (click)="nextSlide()" expand="block" fill="clear" shape="round">
+          next >
+        </ion-button>
+        <ion-button *ngIf="story.title==='3'" (click)="getLoginPage()" expand="block" fill="clear" shape="round">
+          Commencer
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

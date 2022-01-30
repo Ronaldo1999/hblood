@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>analyses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of analyses; let i=index">
+      <ion-label>
+        <h6>
+          <!-- <ion-badge horizontal="start" [color]="controlEtatSanitaire(item?.etatSanitaire)" mode="ios">
+            <div style="width: 1px;height: 3px; border-radius: 100%;"></div>
+          </ion-badge> -->
+          <ion-badge
+            *ngIf="item?.etatSanitaire==='normale'||item?.etatSanitaire==='normale haute'||item?.etatSanitaire==='optimale'"
+            slot="end" color="success">
+            <div style="width: 1px;height: 3px; border-radius: 100%;"></div>
+          </ion-badge>
+          <ion-badge *ngIf="item?.etatSanitaire==='hypertension legere'||item?.etatSanitaire==='hypertension modere'"
+            slot="end" color="warning">
+            <div style="width: 1px;height: 3px; border-radius: 100%;"></div>
+          </ion-badge>
+          <ion-badge
+            *ngIf="item?.etatSanitaire==='hypertension tres severe'||item?.etatSanitaire==='hypertension severe'"
+            slot="end" color="danger">
+            <div style="width: 1px;height: 3px; border-radius: 100%;"></div>
+          </ion-badge>
+          <span style="margin-right: 3%;">
+            {{item?.dateupdate | date}} - {{item?.etatSanitaire}}
+          </span>
+        </h6>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showModal = true">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal [isOpen]="false" [breakpoints]="[0.1, 0.5, 1]" [initialBreakpoint]="0.5">
+    <ng-template>
+      <ion-content>Modal Content</ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- Card Modal -->
+  <ion-modal [isOpen]="showModal" [swipeToClose]="true">
+    <ng-template>
+      <ion-content>
+        <ion-item-group class="ion-padding">
+          <ion-item lines="full">
+            <ion-label position="floating">Systole</ion-label>
+            <ion-input [(ngModel)]="analyse.systole" name="systole" id="systole" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">Diastole</ion-label>
+            <ion-input type="number" [(ngModel)]="analyse.diastole" name="diastole" id="diastole"></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Pouls</ion-label>
+            <ion-input [(ngModel)]="analyse.pouls" name="pouls" id="pouls" type="number"></ion-input>
+          </ion-item>
+
+        </ion-item-group>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="saveAnalyse()" color="primary" expand="block">
+              <ion-icon name="enter-outline"></ion-icon>Analyser
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <!--
+  <ion-accordion-group>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>People</ion-label>
+      </ion-item>
+
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>Max</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Mike</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Kim</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+  </ion-accordion-group> -->
+</ion-content>
