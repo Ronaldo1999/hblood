@@ -21,3 +21,14 @@ import { AnalyseComponent } from './entities/analyse/analyse.component';
   bootstrap: [AppComponent],
 })
 export class AppModule { }
+
+
+
+
+
+
+
+
+
+
+

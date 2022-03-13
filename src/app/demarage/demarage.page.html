@@ -1,12 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>demarage</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content> -->
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -15,16 +6,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
   <ion-slides #sliders style="width: 100% !important;height: 100% !important;" class="slide-padding" pager="false">
     <ion-slide *ngFor="let story of topStories; let i = index">
       <div class="container">
         <ion-img src="{{story.picture}}"></ion-img>
-        <br>
-        <ion-label>{{story.title}}</ion-label>
+    
+        <h3><ion-label class="title1">{{story.title1}}</ion-label></h3>
         <!-- (click)="nextSlide(i)" -->
-        <ion-button *ngIf="story.title==='1' || story.title==='2'" (click)="nextSlide()" expand="block" fill="clear" shape="round">
-          next >
+        <ion-button class="button" *ngIf="story.title==='1' || story.title==='2'" (click)="nextSlide()" expand="block" fill="clear" shape="round">
+          Next >
         </ion-button>
         <ion-button *ngIf="story.title==='3'" (click)="getLoginPage()" expand="block" fill="clear" shape="round">
           Commencer

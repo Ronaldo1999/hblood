@@ -18,15 +18,15 @@
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" required></ion-input>
     </ion-item>
-
-    <ion-row>
+    <br><a  class="small-text" slot="end" fill="clear">mot de passe oublié?</a><br>
+    <br><ion-row>
       <ion-col>
         <ion-button (click)="login()" color="primary" expand="block">
           <ion-icon name="enter-outline"></ion-icon>Se connecter
         </ion-button>
-        <!-- [routerLink]="['/forgot-password']" -->
-        <a  class="small-text">mot de passe oublié?</a><br>
-        <a [routerLink]="['/register']" class="small-text">s'inscrire</a>
+        <br>
+        <!-- [routerLink]="['/forgot-password']" --> 
+        <ion-button [routerLink]="['/register']" expand="block" ><ion-icon name="add-circle"></ion-icon>Inscription</ion-button>
       </ion-col>
     </ion-row>
   </form>

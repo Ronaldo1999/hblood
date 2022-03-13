@@ -17,9 +17,9 @@ export class DemaragePage implements OnInit {
 
   ngOnInit() {
     this.topStories = [
-      { title: '1', author: 'Rea Ramsey', body: '', picture: 'assets/undraw_medicine_b-1-ol.svg' },
-      { title: '2', author: 'Ellesha Hartley', body: '', picture: 'assets/undraw_doctor_kw-5-l.svg' },
-      { title: '3', author: 'Vinnie Alexander', body: '', picture: 'assets/undraw_metrics_re_6g90.svg' },
+      { title1: 'Les maladies cardio-vasculaires sont la première cause de mortalité dans le monde.',title: '1', author: 'Rea Ramsey', body: '', picture: 'assets/undraw_medicine_b-1-ol.svg' },
+      { title1: 'L’insuffisance cardiaque,est une pathologie fréquente et de mauvais pronostic.',title: '2', author: 'Ellesha Hartley', body: '', picture: 'assets/undraw_doctor_kw-5-l.svg' },
+      { title1: 'La proportion d’individus traités,il importe d’évaluer,le risque cardiovasculaire de ces sujets.',title: '3', author: 'Vinnie Alexander', body: '', picture: 'assets/undraw_metrics_re_6g90.svg' },
       // { title: 'Astro Photography Guide', author: 'Greg Rakozy', body: '', picture: 'assets/undraw_security_on_re_e491.svg' }
     ];
   }
