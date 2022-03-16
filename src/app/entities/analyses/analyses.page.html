@@ -9,9 +9,6 @@
     <ion-item *ngFor="let item of analyses; let i=index">
       <ion-label>
         <h6>
-          <!-- <ion-badge horizontal="start" [color]="controlEtatSanitaire(item?.etatSanitaire)" mode="ios">
-            <div style="width: 1px;height: 3px; border-radius: 100%;"></div>
-          </ion-badge> -->
           <ion-badge
             *ngIf="item?.etatSanitaire==='normale'||item?.etatSanitaire==='normale haute'||item?.etatSanitaire==='optimale'"
             slot="end" color="success">
@@ -76,25 +73,4 @@
       </ion-content>
     </ng-template>
   </ion-modal>
-  <!--
-  <ion-accordion-group>
-    <ion-accordion>
-      <ion-item slot="header">
-        <ion-label>People</ion-label>
-      </ion-item>
-
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Max</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Mike</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Kim</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-
-  </ion-accordion-group> -->
 </ion-content>

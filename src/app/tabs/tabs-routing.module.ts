@@ -24,6 +24,14 @@ const routes: Routes = [
         loadChildren: () => import('../entities/analyses/analyses.module').then(m => m.AnalysesPageModule)
       },
       {
+        path: 'doctor-list',
+        loadChildren: () => import('../entities/utilisateurs/doctor-list/doctor-list.module').then(m => m.DoctorListPageModule)
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('../entities/utilisateurs/utilisateurs.module').then(m => m.UtilisateursModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

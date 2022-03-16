@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'analyses',
-    loadChildren: () => import('./entities/analyses/analyses.module').then( m => m.AnalysesPageModule)
+    loadChildren: () => import('./entities/analyses/analyses.module').then(m => m.AnalysesPageModule)
   }
 
 ];
