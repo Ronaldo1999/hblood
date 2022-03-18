@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IUtilisateur } from 'src/app/model/utilisateur';
+import { IUtilisateur, Utilisateur } from 'src/app/model/utilisateur';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -10,11 +10,14 @@ import { UserService } from 'src/app/service/user.service';
 export class DoctorListPage implements OnInit {
 
   doctors: IUtilisateur[];
+  //doctor: Utilisateur;
   constructor(
     private doctorService: UserService
   ) { }
 
   ngOnInit() {
+    //this.doctor = new Utilisateur();
+    this.getAllDoctors();
   }
 
   getAllDoctors() {
